@@ -1,27 +1,26 @@
 package UserInterfaces.CustomComponents;
 
+import UserInterfaces.CustomComponents.Colors.Colors;
+import UserInterfaces.CustomComponents.Icons.Icons;
+import UserInterfaces.CustomComponents.Themes.customLafNavigation;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class tooledPanel extends JPanel {
 
     public tooledPanel(){
+        customLafNavigation.setUp();
         this.setLayout(new FlowLayout(FlowLayout.LEADING));
         JToolBar toolBar = new JToolBar();
-        JMenuBar menuBar = new JMenuBar();
-        JMenu Files = new JMenu("Files");
-        JMenu User = new JMenu("User");
-        JMenuItem logout = new JMenuItem("Log-out");
-
-        this.add(menuBar);
-        menuBar.add(Files);
-        User.add(logout);
-        menuBar.add(User);
+        JButton testFile = new JButton(Icons.scaled_File);
 
         this.add(toolBar);
+        this.setBackground(Colors.SECONDARY);
+        toolBar.setBackground(Colors.SECONDARY);
         toolBar.addSeparator();
-        toolBar.add(new JButton("test A"));
-        toolBar.add(new JButton("test B"));
-        toolBar.add(new JButton("test C"));
+        toolBar.add(testFile);
+        toolBar.addSeparator();
+        this.add(new JButton("Test on props"));
     }
 }
