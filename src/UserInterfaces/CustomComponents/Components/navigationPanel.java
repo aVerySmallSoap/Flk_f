@@ -1,16 +1,15 @@
-package UserInterfaces.CustomComponents;
+package UserInterfaces.CustomComponents.Components;
 
 import UserInterfaces.CustomComponents.Colors.Colors;
 import UserInterfaces.CustomComponents.Icons.Icons;
-import UserInterfaces.CustomComponents.Themes.customLafNavigation;
+import UserInterfaces.CustomComponents.Themes.navigationPanelTheme;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class tooledPanel extends JPanel {
-
-    public tooledPanel(){
-        customLafNavigation.setUp();
+public class navigationPanel extends JPanel {
+    public navigationPanel(){
+        navigationPanelTheme.setUp();
         this.setLayout(new FlowLayout(FlowLayout.LEADING));
         JToolBar toolBar = new JToolBar();
         JButton testFile = new JButton(Icons.scaled_File);

@@ -1,4 +1,4 @@
-package UserInterfaces.CustomComponents;
+package UserInterfaces.CustomComponents.Components;
 
 import javax.swing.*;
 

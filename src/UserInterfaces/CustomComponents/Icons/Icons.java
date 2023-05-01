@@ -9,6 +9,6 @@ public class Icons {
         return Icons.class.getResource(path);
     }
 
-    private static final Image file = new ImageIcon(resourceFinder("/UserInterfaces/Resources/filled_File.png")).getImage();
+    private static final Image file = new ImageIcon(resourceFinder("/UserInterfaces/Resources/filled_Filev2.png")).getImage();
     public static final ImageIcon scaled_File = new ImageIcon(file.getScaledInstance(16,16,Image.SCALE_SMOOTH));
 }
