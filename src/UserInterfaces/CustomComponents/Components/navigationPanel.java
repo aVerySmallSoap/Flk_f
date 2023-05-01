@@ -1,7 +1,7 @@
 package UserInterfaces.CustomComponents.Components;
 
 import UserInterfaces.CustomComponents.Colors.Colors;
-import UserInterfaces.CustomComponents.Icons.Icons;
+import UserInterfaces.CustomComponents.Components.Function.HomeButton;
 import UserInterfaces.CustomComponents.Themes.navigationPanelTheme;
 
 import javax.swing.*;
@@ -12,14 +12,13 @@ public class navigationPanel extends JPanel {
         navigationPanelTheme.setUp();
         this.setLayout(new FlowLayout(FlowLayout.LEADING));
         JToolBar toolBar = new JToolBar();
-        JButton testFile = new JButton(Icons.scaled_File);
+        HomeButton Home = new HomeButton();
 
         this.add(toolBar);
         this.setBackground(Colors.SECONDARY);
         toolBar.setBackground(Colors.SECONDARY);
         toolBar.addSeparator();
-        toolBar.add(testFile);
+        toolBar.add(Home);
         toolBar.addSeparator();
-        this.add(new JButton("Test on props"));
     }
 }

@@ -1,5 +1,7 @@
 package UserInterfaces;
 
+import UserInterfaces.CustomComponents.Colors.Colors;
+import UserInterfaces.CustomComponents.Components.CenterPanel;
 import UserInterfaces.CustomComponents.Components.leftStructurePanel;
 import UserInterfaces.CustomComponents.Components.frameMenu;
 import UserInterfaces.CustomComponents.Components.navigationPanel;
@@ -9,6 +11,7 @@ import java.awt.*;
 
 public class Dashboard implements Runnable{
 
+    public static CenterPanel centerPanel = new CenterPanel() ;
     private void init(){
         JFrame frame = new JFrame("Dashboard");
         frameMenu topMenu = new frameMenu();
@@ -24,6 +27,7 @@ public class Dashboard implements Runnable{
 
         frame.add(topPanel, BorderLayout.NORTH);
         frame.add(leftPanel, BorderLayout.WEST);
+        frame.add(centerPanel, BorderLayout.CENTER);
     }
 
     @Override

@@ -1,23 +1,29 @@
 package UserInterfaces.CustomComponents.Components;
 
 import UserInterfaces.CustomComponents.Colors.Colors;
+import UserInterfaces.CustomComponents.Icons.Icons;
 import UserInterfaces.CustomComponents.Themes.leftTheme;
 
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
-import java.awt.*;
 
 public class leftStructurePanel extends JPanel {
 
     public leftStructurePanel(){
-        GridBagConstraints constraints = new GridBagConstraints();
         leftTheme.setUp();
         this.setBackground(Colors.SECONDARY);
-        this.setBorder(new MatteBorder(2,0,0,0, Colors.PRIMARY));
-        this.setLayout(new GridBagLayout());
-        JButton test = new JButton("test");
+        this.setBorder(new MatteBorder(3,0,0,1, Colors.PRIMARY));
+        JToolBar toolBar = new JToolBar(JToolBar.VERTICAL);
+        JButton test = new JButton(Icons.File);
+        JButton test2 = new JButton(Icons.File);
+        JButton test3 = new JButton(Icons.File);
+        JButton test4 = new JButton(Icons.File);
 
-        constraints.insets = new Insets(5,5,5,5);
-        this.add(test,constraints);
+        this.add(toolBar);
+        toolBar.setBackground(Colors.SECONDARY);
+        toolBar.add(test);
+        toolBar.add(test2);
+        toolBar.add(test3);
+        toolBar.add(test4);
     }
 }
