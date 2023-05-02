@@ -19,7 +19,7 @@ public class SettingsButton extends JButton implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        TabController.getInstance().addTab(Users.NAME, new Settings());
+        TabController.getInstance().addTab(Settings.NAME, new Settings());
         Dashboard.centerPanel.revalidate();
     }
 }

@@ -19,7 +19,7 @@ public class TableButton extends JButton implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        TabController.getInstance().addTab(Users.NAME, new Table());
+        TabController.getInstance().addTab(Table.NAME, new Table());
         Dashboard.centerPanel.revalidate();
     }
 }
