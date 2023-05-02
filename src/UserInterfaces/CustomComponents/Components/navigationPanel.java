@@ -1,11 +1,9 @@
 package UserInterfaces.CustomComponents.Components;
 
-import UserInterfaces.CustomComponents.Colors.Colors;
 import UserInterfaces.CustomComponents.Components.Function.HomeButton;
 import UserInterfaces.CustomComponents.Components.Function.SettingsButton;
 import UserInterfaces.CustomComponents.Components.Function.TableButton;
 import UserInterfaces.CustomComponents.Components.Function.UsersButton;
-import UserInterfaces.CustomComponents.Icons;
 import UserInterfaces.CustomComponents.Themes.navigationPanelTheme;
 
 import javax.swing.*;

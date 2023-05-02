@@ -11,7 +11,7 @@ import java.awt.*;
 
 public class Dashboard implements Runnable {
 
-    public static CenterPanel centerPanel = new CenterPanel() ;
+    public static final CenterPanel centerPanel = new CenterPanel() ;
     private void init(){
         JFrame frame = new JFrame("Dashboard");
         frameMenu topMenu = new frameMenu();

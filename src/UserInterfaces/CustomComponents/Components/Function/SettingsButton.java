@@ -4,7 +4,6 @@ import UserInterfaces.CustomComponents.Components.TabController;
 import UserInterfaces.CustomComponents.Icons;
 import UserInterfaces.Dashboard;
 import UserInterfaces.PageableComponents.Settings;
-import UserInterfaces.PageableComponents.Users;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

@@ -5,12 +5,12 @@ import Interfaces.ResourceLocator;
 import java.awt.*;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
 
 public class Fonts extends ResourceLocator {
 
     private static final String prefix = "/UserInterfaces/Resources/Fonts/";
 
+    @SuppressWarnings("SameParameterValue")
     private static InputStream getResource(String path){
         return Fonts.class.getResourceAsStream(prefix.concat(path));
     }
