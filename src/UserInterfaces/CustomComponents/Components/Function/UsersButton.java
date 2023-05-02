@@ -1,7 +1,7 @@
 package UserInterfaces.CustomComponents.Components.Function;
 
 import UserInterfaces.CustomComponents.Components.TabController;
-import UserInterfaces.CustomComponents.Icons.Icons;
+import UserInterfaces.CustomComponents.Icons;
 import UserInterfaces.Dashboard;
 import UserInterfaces.PageableComponents.Users;
 

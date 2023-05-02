@@ -1,7 +1,7 @@
 package UserInterfaces.CustomComponents.Components.Function;
 
 import UserInterfaces.CustomComponents.Components.TabController;
-import UserInterfaces.CustomComponents.Icons.Icons;
+import UserInterfaces.CustomComponents.Icons;
 import UserInterfaces.CustomComponents.Themes.TabTheme;
 
 import javax.swing.*;
@@ -15,8 +15,13 @@ public class TabFunctions extends JPanel {
     public TabFunctions() {
         TabTheme.setUp();
         TabController tabController = TabController.getInstance();
-        JLabel title= new JLabel(tabController
+        JLabel title;
+        if(tabController.getTabCount() <= 1){
+            title = new JLabel(tabController.getTitleAt(tabController.getSelectedIndex()));
+        }else {
+            title = new JLabel(tabController
                     .getTitleAt(tabController.indexAtLocation(tabController.getMousePosition().x, tabController.getMousePosition().y)));
+        }
         this.setLayout(new FlowLayout(FlowLayout.TRAILING));
         this.add(title);
         this.setBackground(new Color(0,0,0,0));
@@ -28,26 +33,21 @@ public class TabFunctions extends JPanel {
 class CloseButton extends JButton implements MouseListener {
     public CloseButton() {
         super(Icons.CLOSE);
-        this.setLayout(new FlowLayout(FlowLayout.TRAILING));
         this.addMouseListener(this);
-        this.putClientProperty("JButton.buttonType","roundRect");
         this.setBorderPainted(false);
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        TabController.getInstance().remove(TabController.getInstance().getSelectedIndex());
+        TabController tabController = TabController.getInstance();
+        tabController.remove(tabController.indexAtLocation(tabController.getMousePosition().x, tabController.getMousePosition().y));
     }
 
     @Override
-    public void mousePressed(MouseEvent e) {
-
-    }
+    public void mousePressed(MouseEvent e) {}
 
     @Override
-    public void mouseReleased(MouseEvent e) {
-
-    }
+    public void mouseReleased(MouseEvent e) {}
 
     @Override
     public void mouseEntered(MouseEvent e) {

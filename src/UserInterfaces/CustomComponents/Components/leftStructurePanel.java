@@ -1,7 +1,7 @@
 package UserInterfaces.CustomComponents.Components;
 
 import UserInterfaces.CustomComponents.Colors.Colors;
-import UserInterfaces.CustomComponents.Icons.Icons;
+import UserInterfaces.CustomComponents.Icons;
 import UserInterfaces.CustomComponents.Themes.leftTheme;
 
 import javax.swing.*;

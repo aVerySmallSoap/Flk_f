@@ -35,7 +35,8 @@ public class TabController extends JTabbedPane implements ChangeListener, MouseL
                 this.revalidate();
             }
         }catch (IndexOutOfBoundsException ex){
-            System.out.println("Out of Pages");
+            System.out.println(ex.getMessage());
+            System.out.println("state error");
         }
     }
 
@@ -56,22 +57,27 @@ public class TabController extends JTabbedPane implements ChangeListener, MouseL
                 this.revalidate();
             }
         }catch (IndexOutOfBoundsException ex){
-            System.out.println("Out of Pages");
+            System.out.println(ex.getMessage());
+            System.out.println("Error on enter");
         }
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-        try{
-            if(this.getComponents().length > 0){
-                System.out.println(lastIndexHovered);
-                this.setTabComponentAt(lastIndexHovered, new JLabel(this.getComponentAt(lastIndexHovered).getName()));
-                this.repaint();
-                this.revalidate();
-                lastIndexHovered = 0;
+        if(!this.getVisibleRect().contains(e.getPoint())){
+            try{
+                if(this.getComponents().length > 0){
+                    if(!this.getComponentAt(this.getSelectedIndex()).hasFocus()){
+                        this.setTabComponentAt(lastIndexHovered, new JLabel(this.getComponentAt(lastIndexHovered).getName()));
+                        this.repaint();
+                        this.revalidate();
+                        lastIndexHovered = 0;
+                    }
+                }
+            }catch (IndexOutOfBoundsException ex){
+                System.out.println(ex.getMessage());
+                System.out.println("Error on exit");
             }
-        }catch (IndexOutOfBoundsException ex){
-            System.out.println("Out of Pages");
         }
     }
 }
