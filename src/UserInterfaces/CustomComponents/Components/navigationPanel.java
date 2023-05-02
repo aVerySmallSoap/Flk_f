@@ -2,6 +2,7 @@ package UserInterfaces.CustomComponents.Components;
 
 import UserInterfaces.CustomComponents.Colors.Colors;
 import UserInterfaces.CustomComponents.Components.Function.HomeButton;
+import UserInterfaces.CustomComponents.Components.Function.UsersButton;
 import UserInterfaces.CustomComponents.Themes.navigationPanelTheme;
 
 import javax.swing.*;
@@ -13,6 +14,7 @@ public class navigationPanel extends JPanel {
         this.setLayout(new FlowLayout(FlowLayout.LEADING));
         JToolBar toolBar = new JToolBar();
         HomeButton Home = new HomeButton();
+        UsersButton Users = new UsersButton();
 
         this.add(toolBar);
         this.setBackground(Colors.SECONDARY);
@@ -20,5 +22,7 @@ public class navigationPanel extends JPanel {
         toolBar.addSeparator();
         toolBar.add(Home);
         toolBar.addSeparator();
+        toolBar.add(Users);
+
     }
 }

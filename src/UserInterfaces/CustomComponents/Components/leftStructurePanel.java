@@ -14,10 +14,10 @@ public class leftStructurePanel extends JPanel {
         this.setBackground(Colors.SECONDARY);
         this.setBorder(new MatteBorder(3,0,0,1, Colors.PRIMARY));
         JToolBar toolBar = new JToolBar(JToolBar.VERTICAL);
-        JButton test = new JButton(Icons.File);
-        JButton test2 = new JButton(Icons.File);
-        JButton test3 = new JButton(Icons.File);
-        JButton test4 = new JButton(Icons.File);
+        JButton test = new JButton(Icons.FILE);
+        JButton test2 = new JButton(Icons.FILE);
+        JButton test3 = new JButton(Icons.FILE);
+        JButton test4 = new JButton(Icons.FILE);
 
         this.add(toolBar);
         toolBar.setBackground(Colors.SECONDARY);

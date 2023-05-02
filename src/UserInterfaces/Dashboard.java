@@ -1,6 +1,5 @@
 package UserInterfaces;
 
-import UserInterfaces.CustomComponents.Colors.Colors;
 import UserInterfaces.CustomComponents.Components.CenterPanel;
 import UserInterfaces.CustomComponents.Components.leftStructurePanel;
 import UserInterfaces.CustomComponents.Components.frameMenu;
@@ -9,7 +8,7 @@ import UserInterfaces.CustomComponents.Components.navigationPanel;
 import javax.swing.*;
 import java.awt.*;
 
-public class Dashboard implements Runnable{
+public class Dashboard implements Runnable {
 
     public static CenterPanel centerPanel = new CenterPanel() ;
     private void init(){
