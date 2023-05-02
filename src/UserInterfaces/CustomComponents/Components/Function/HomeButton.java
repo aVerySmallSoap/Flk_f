@@ -14,6 +14,7 @@ public class HomeButton extends JButton implements ActionListener {
     public HomeButton(){
         this.addActionListener(this);
         this.setIcon(Icons.HOME);
+        this.setToolTipText("Home");
     }
 
     @Override

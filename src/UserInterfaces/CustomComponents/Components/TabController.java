@@ -41,7 +41,8 @@ public class TabController extends JTabbedPane implements ChangeListener, MouseL
     }
 
     @Override
-    public void mouseClicked(MouseEvent e) {}
+    public void mouseClicked(MouseEvent e) {
+    }
     @Override
     public void mousePressed(MouseEvent e) {}
     @Override

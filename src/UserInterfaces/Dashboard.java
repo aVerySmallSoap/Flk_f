@@ -4,6 +4,7 @@ import UserInterfaces.CustomComponents.Components.CenterPanel;
 import UserInterfaces.CustomComponents.Components.leftStructurePanel;
 import UserInterfaces.CustomComponents.Components.frameMenu;
 import UserInterfaces.CustomComponents.Components.navigationPanel;
+import UserInterfaces.CustomComponents.Fonts;
 
 import javax.swing.*;
 import java.awt.*;
@@ -31,6 +32,7 @@ public class Dashboard implements Runnable {
 
     @Override
     public void run() {
+        Fonts.registerFonts();
         init();
     }
 }
