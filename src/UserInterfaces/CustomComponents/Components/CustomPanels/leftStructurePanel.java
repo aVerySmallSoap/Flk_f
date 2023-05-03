@@ -1,6 +1,6 @@
-package UserInterfaces.CustomComponents.Components;
+package UserInterfaces.CustomComponents.Components.CustomPanels;
 
-import UserInterfaces.CustomComponents.Colors.Colors;
+import UserInterfaces.CustomComponents.Colors;
 import UserInterfaces.CustomComponents.Icons;
 import UserInterfaces.CustomComponents.Themes.leftTheme;
 

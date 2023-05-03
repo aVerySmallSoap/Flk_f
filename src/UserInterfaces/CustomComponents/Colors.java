@@ -1,4 +1,4 @@
-package UserInterfaces.CustomComponents.Colors;
+package UserInterfaces.CustomComponents;
 
 import java.awt.*;
 

@@ -1,4 +1,4 @@
-package UserInterfaces.CustomComponents.Components;
+package UserInterfaces.CustomComponents.Components.CustomPanels;
 
 import UserInterfaces.CustomComponents.Components.Function.HomeButton;
 import UserInterfaces.CustomComponents.Components.Function.SettingsButton;
