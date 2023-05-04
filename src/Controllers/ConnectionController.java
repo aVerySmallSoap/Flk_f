@@ -12,6 +12,7 @@ public class ConnectionController implements IConnector {
 
     private ConnectionController(){}
 
+
     public static ConnectionController getInstance(){
         if(controller == null){
             controller = new ConnectionController();
