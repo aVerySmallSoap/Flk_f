@@ -14,7 +14,7 @@ class customTableModel extends AbstractTableModel{
 
     @Override
     public int getRowCount() {
-        return 5;
+        return 0;
     }
 
     @Override

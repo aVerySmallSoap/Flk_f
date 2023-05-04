@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class Home extends JPanel {
     public static final String NAME = "Home";
-    Insets zeroInsets = new Insets(0,0,0,0);
+    final Insets zeroInsets = new Insets(0,0,0,0);
 
     public Home(){
         this.setName(NAME);
