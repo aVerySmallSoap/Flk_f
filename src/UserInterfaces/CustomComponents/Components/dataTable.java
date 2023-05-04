@@ -6,7 +6,7 @@ import javax.swing.table.AbstractTableModel;
 public class dataTable extends JTable {
 
     public dataTable(){
-
+        super(new customTableModel());
     }
 }
 
@@ -14,12 +14,12 @@ class customTableModel extends AbstractTableModel{
 
     @Override
     public int getRowCount() {
-        return 0;
+        return 5;
     }
 
     @Override
     public int getColumnCount() {
-        return 0;
+        return 5;
     }
 
     @Override
