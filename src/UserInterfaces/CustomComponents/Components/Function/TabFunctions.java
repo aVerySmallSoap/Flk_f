@@ -33,8 +33,10 @@ public class TabFunctions extends JPanel {
 class CloseButton extends JButton implements MouseListener {
     public CloseButton() {
         super(Icons.CLOSE);
+
         this.addMouseListener(this);
         this.setBorderPainted(false);
+        this.setToolTipText("Close Tab");
     }
 
     @Override

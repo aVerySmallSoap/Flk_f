@@ -1,5 +1,6 @@
 package UserInterfaces.CustomComponents.Components.Function;
 
+import UserInterfaces.CustomComponents.Components.CustomPanels.CenterPanel;
 import UserInterfaces.CustomComponents.Components.CustomPanels.TabController;
 import UserInterfaces.CustomComponents.Icons;
 import UserInterfaces.Dashboard;
@@ -19,6 +20,6 @@ public class TableButton extends JButton implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         TabController.getInstance().addTab(Table.NAME, new Table());
-        Dashboard.centerPanel.revalidate();
+        CenterPanel.revalidateComponent();
     }
 }

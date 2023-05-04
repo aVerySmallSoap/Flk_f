@@ -9,10 +9,8 @@ import UserInterfaces.CustomComponents.Fonts;
 import javax.swing.*;
 import java.awt.*;
 
-public class Dashboard implements Runnable {
-
-    public static final CenterPanel centerPanel = new CenterPanel() ;
-    private void init(){
+public class Dashboard{
+    private static void init(){
         JFrame frame = new JFrame("Dashboard");
         frameMenu topMenu = new frameMenu();
         navigationPanel topPanel = new navigationPanel();
@@ -27,11 +25,11 @@ public class Dashboard implements Runnable {
 
         frame.add(topPanel, BorderLayout.NORTH);
         frame.add(leftPanel, BorderLayout.WEST);
-        frame.add(centerPanel, BorderLayout.CENTER);
+        frame.add(CenterPanel.getInstance(), BorderLayout.CENTER);
     }
 
-    @Override
-    public void run() {
+
+    public static void run() {
         Fonts.registerFonts();
         init();
     }

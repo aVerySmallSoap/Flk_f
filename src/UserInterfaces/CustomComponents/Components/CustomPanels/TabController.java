@@ -5,10 +5,9 @@ import UserInterfaces.CustomComponents.Components.Function.TabFunctions;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 
-public class TabController extends JTabbedPane implements ChangeListener, MouseListener {
+public class TabController extends JTabbedPane implements ChangeListener, MouseListener{
 
     private int lastIndexHovered = 0;
 
@@ -24,6 +23,14 @@ public class TabController extends JTabbedPane implements ChangeListener, MouseL
     private TabController(){
         this.addChangeListener(this);
         this.addMouseListener(this);
+
+        this.getInputMap().put(KeyStroke.getKeyStroke(KeyEvent.VK_W, KeyEvent.CTRL_DOWN_MASK),"CLOSE_TAB");
+        this.getActionMap().put("CLOSE_TAB", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                removeTabAt(getSelectedIndex());
+            }
+        });
     }
 
     @Override
@@ -82,4 +89,3 @@ public class TabController extends JTabbedPane implements ChangeListener, MouseL
         }
     }
 }
-
