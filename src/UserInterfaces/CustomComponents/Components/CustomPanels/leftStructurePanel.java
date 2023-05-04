@@ -9,7 +9,16 @@ import javax.swing.border.MatteBorder;
 
 public class leftStructurePanel extends JPanel {
 
-    public leftStructurePanel(){
+    private static leftStructurePanel panel;
+
+    public static leftStructurePanel getInstance(){
+        if(panel == null){
+            panel = new leftStructurePanel();
+        }
+        return panel;
+    }
+
+    private leftStructurePanel(){
         leftTheme.setUp();
         this.setBackground(Colors.SECONDARY);
         this.setBorder(new MatteBorder(3,0,0,1, Colors.PRIMARY));

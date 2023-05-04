@@ -17,7 +17,7 @@ public class CenterPanel extends JPanel {
         return centerPanel;
     }
 
-    public static void revalidateComponent(){
+    public static void Refresh(){
         centerPanel.revalidate();
     }
 

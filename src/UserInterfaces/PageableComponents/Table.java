@@ -1,5 +1,7 @@
 package UserInterfaces.PageableComponents;
 
+import UserInterfaces.CustomComponents.Components.dataTable;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -11,7 +13,7 @@ public class Table extends JPanel {
         JPanel TreeLeft = new JPanel();
         JPanel BottomInfo = new JPanel();
         JPanel RightLead = new JPanel();
-        JTable table = new JTable();
+        dataTable table = new dataTable();
         JScrollPane scrollPane = new JScrollPane(table);
 
         this.add(TreeLeft, BorderLayout.WEST);

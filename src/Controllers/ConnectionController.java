@@ -19,6 +19,7 @@ public class ConnectionController implements IConnector {
         return controller;
     }
 
+    @Override
     public Connection getConnection() {
         try{
             return DriverManager.getConnection("jdbc:mysql://localhost:3306/table_data","root","root");

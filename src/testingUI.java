@@ -6,7 +6,6 @@ public class testingUI {
     public static void main(String[] args) {
         ThemeLoader.LoadThemes();
         FlatLightLaf.setup();
-        Dashboard d = new Dashboard();
-        d.run();
+        Dashboard.run();
     }
 }

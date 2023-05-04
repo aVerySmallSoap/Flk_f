@@ -10,7 +10,17 @@ import javax.swing.*;
 import java.awt.*;
 
 public class navigationPanel extends JPanel {
-    public navigationPanel(){
+
+    private static navigationPanel navigationPanel;
+
+    public static navigationPanel getInstance(){
+        if(navigationPanel == null){
+            navigationPanel = new navigationPanel();
+        }
+        return navigationPanel;
+    }
+
+    private navigationPanel(){
         navigationPanelTheme.setUp();
         this.setLayout(new FlowLayout(FlowLayout.LEADING));
         JToolBar toolBar = new JToolBar();
@@ -20,8 +30,6 @@ public class navigationPanel extends JPanel {
         TableButton Tables = new TableButton();
 
         this.add(toolBar);
-//        this.setBackground(Colors.SECONDARY);
-//        toolBar.setBackground(Colors.SECONDARY);
         toolBar.add(Home);
         toolBar.addSeparator();
         toolBar.add(Users);

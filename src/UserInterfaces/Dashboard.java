@@ -13,8 +13,8 @@ public class Dashboard{
     private static void init(){
         JFrame frame = new JFrame("Dashboard");
         frameMenu topMenu = new frameMenu();
-        navigationPanel topPanel = new navigationPanel();
-        leftStructurePanel leftPanel = new leftStructurePanel();
+        var topPanel = navigationPanel.getInstance();
+        var leftPanel = leftStructurePanel.getInstance();
 
         frame.setVisible(true);
         frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());

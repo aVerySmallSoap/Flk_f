@@ -3,7 +3,6 @@ package UserInterfaces.CustomComponents.Components.Function;
 import UserInterfaces.CustomComponents.Components.CustomPanels.CenterPanel;
 import UserInterfaces.CustomComponents.Components.CustomPanels.TabController;
 import UserInterfaces.CustomComponents.Icons;
-import UserInterfaces.Dashboard;
 import UserInterfaces.PageableComponents.Users;
 
 import javax.swing.*;
@@ -20,6 +19,6 @@ public class UsersButton extends JButton implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         TabController.getInstance().addTab(Users.NAME, new Users());
-        CenterPanel.revalidateComponent();
+        CenterPanel.Refresh();
     }
 }

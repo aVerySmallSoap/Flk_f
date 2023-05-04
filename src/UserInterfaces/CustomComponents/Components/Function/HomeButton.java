@@ -4,7 +4,6 @@ import UserInterfaces.CustomComponents.Components.CustomPanels.CenterPanel;
 import UserInterfaces.CustomComponents.Components.CustomPanels.TabController;
 import UserInterfaces.PageableComponents.Home;
 import UserInterfaces.CustomComponents.Icons;
-import UserInterfaces.Dashboard;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -21,7 +20,7 @@ public class HomeButton extends JButton implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         TabController.getInstance().addTab(Home.NAME, new Home());
-        CenterPanel.revalidateComponent();
+        CenterPanel.Refresh();
     }
 }
 
