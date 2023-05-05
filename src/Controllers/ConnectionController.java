@@ -1,12 +1,12 @@
 package Controllers;
 
-import Interfaces.IConnector;
+import Interfaces.IPassableConnector;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConnectionController implements IConnector {
+public class ConnectionController extends IPassableConnector {
 
     private static ConnectionController controller;
 
@@ -20,12 +20,27 @@ public class ConnectionController implements IConnector {
         return controller;
     }
 
-    @Override
-    public Connection getConnection() {
+    public Connection getConnection(String URL) {
         try{
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/table_data","root","root");
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/"+URL.trim(), "root","root");
         }catch (SQLException ex){
-            throw new RuntimeException(ex);
+            throw new RuntimeException();
+        }
+    }
+
+    public Connection getConnection(String URL, String User) {
+        try{
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/"+URL.trim(), User,"");
+        }catch (SQLException ex){
+            throw new RuntimeException();
+        }
+    }
+
+    public Connection getConnection(String URL, String User, String Pass) {
+        try{
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/"+URL.trim(), User,Pass);
+        }catch (SQLException ex){
+            throw new RuntimeException();
         }
     }
 }
