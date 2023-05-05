@@ -19,12 +19,15 @@ public class Icons extends ResourceLocator {
     private static final Image users = new ImageIcon(getResource("Users.png")).getImage();
     private static final Image settings = new ImageIcon(getResource("Settings.png")).getImage();
     private static final Image table = new ImageIcon(getResource("table.png")).getImage();
+    private static final Image insertTable = new ImageIcon(getResource("InsertTable.png")).getImage();
+    private static final Image search = new ImageIcon(getResource("search.png")).getImage();
     public static final ImageIcon FILE = new ImageIcon(file.getScaledInstance(16,16,Image.SCALE_SMOOTH));
     public static final ImageIcon HOME = new ImageIcon(home.getScaledInstance(16,16,Image.SCALE_SMOOTH));
     public static final ImageIcon USERS = new ImageIcon(users.getScaledInstance(16,16,Image.SCALE_SMOOTH));
-    public static final ImageIcon CLOSE = new ImageIcon(close.getScaledInstance(8,8,Image.SCALE_SMOOTH));
-    public static final ImageIcon HOVER_CLOSE = new ImageIcon(hoverClose.getScaledInstance(10,10,Image.SCALE_SMOOTH));
     public static final ImageIcon SETTINGS = new ImageIcon(settings.getScaledInstance(16,16,Image.SCALE_SMOOTH));
     public static final ImageIcon TABLE = new ImageIcon(table.getScaledInstance(16,16,Image.SCALE_SMOOTH));
-
+    public static final ImageIcon SEARCH = new ImageIcon(search.getScaledInstance(16,16,Image.SCALE_SMOOTH));
+    public static final ImageIcon INSERTABLE = new ImageIcon(insertTable.getScaledInstance(16,16,Image.SCALE_SMOOTH));
+    public static final ImageIcon CLOSE = new ImageIcon(close.getScaledInstance(8,8,Image.SCALE_SMOOTH));
+    public static final ImageIcon HOVER_CLOSE = new ImageIcon(hoverClose.getScaledInstance(10,10,Image.SCALE_SMOOTH));
 }

@@ -21,7 +21,7 @@ public class leftStructurePanel extends JPanel {
     private leftStructurePanel(){
         leftTheme.setUp();
         this.setBackground(Colors.SECONDARY);
-        this.setBorder(new MatteBorder(3,0,0,1, Colors.PRIMARY));
+        this.setBorder(new MatteBorder(3,0,0,3, Colors.PRIMARY));
         JToolBar toolBar = new JToolBar(JToolBar.VERTICAL);
         JButton test = new JButton(Icons.FILE);
         JButton test2 = new JButton(Icons.FILE);

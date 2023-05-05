@@ -1,9 +1,10 @@
 package UserInterfaces.CustomComponents.Components.Function;
 
+import Controllers.TableController;
 import UserInterfaces.CustomComponents.Components.CustomPanels.CenterPanel;
 import UserInterfaces.CustomComponents.Components.CustomPanels.TabController;
 import UserInterfaces.CustomComponents.Icons;
-import UserInterfaces.PageableComponents.Table;
+import UserInterfaces.CustomComponents.PageableComponents.Table.Table;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -20,5 +21,6 @@ public class TableButton extends JButton implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         TabController.getInstance().addTab(Table.NAME, new Table());
         CenterPanel.Refresh();
+        TableController.getInstance().getData();
     }
 }

@@ -2,7 +2,7 @@ package UserInterfaces.CustomComponents.Components.Function;
 
 import UserInterfaces.CustomComponents.Components.CustomPanels.CenterPanel;
 import UserInterfaces.CustomComponents.Components.CustomPanels.TabController;
-import UserInterfaces.PageableComponents.Home;
+import UserInterfaces.CustomComponents.PageableComponents.Home;
 import UserInterfaces.CustomComponents.Icons;
 
 import javax.swing.*;

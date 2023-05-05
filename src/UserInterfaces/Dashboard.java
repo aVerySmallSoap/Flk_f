@@ -9,28 +9,38 @@ import UserInterfaces.CustomComponents.Fonts;
 import javax.swing.*;
 import java.awt.*;
 
-public class Dashboard{
-    private static void init(){
-        JFrame frame = new JFrame("Dashboard");
+public class Dashboard extends JFrame{
+
+    private static Dashboard dashboard;
+
+    public static Dashboard getInstance(){
+        if(dashboard == null){
+            dashboard = new Dashboard();
+        }
+        return dashboard;
+    }
+
+    private void init(){
         frameMenu topMenu = new frameMenu();
         var topPanel = navigationPanel.getInstance();
         var leftPanel = leftStructurePanel.getInstance();
 
-        frame.setVisible(true);
-        frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setLocationRelativeTo(null);
-        frame.setLayout(new BorderLayout());
-        frame.setJMenuBar(topMenu);
+        this.setTitle("Dashboard");
+        this.setVisible(true);
+        this.setSize(Toolkit.getDefaultToolkit().getScreenSize());
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        this.setLocationRelativeTo(null);
+        this.setLayout(new BorderLayout());
+        this.setJMenuBar(topMenu);
 
-        frame.add(topPanel, BorderLayout.NORTH);
-        frame.add(leftPanel, BorderLayout.WEST);
-        frame.add(CenterPanel.getInstance(), BorderLayout.CENTER);
+        this.add(topPanel, BorderLayout.NORTH);
+        this.add(leftPanel, BorderLayout.WEST);
+        this.add(CenterPanel.getInstance(), BorderLayout.CENTER);
     }
 
 
     public static void run() {
         Fonts.registerFonts();
-        init();
+        Dashboard.getInstance().init();
     }
 }

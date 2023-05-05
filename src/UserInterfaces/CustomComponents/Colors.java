@@ -7,4 +7,5 @@ public class Colors {
     public static final Color SECONDARY = new Color(41,77,97);
     public static final Color ACCENT = new Color(15,150,156);
     public static final Color FINISHING = new Color(5,22,26);
+    public static final Color TRANSPARENT = new Color(0,0,0,0);
 }

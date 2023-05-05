@@ -1,4 +1,4 @@
-package UserInterfaces.PageableComponents;
+package UserInterfaces.CustomComponents.PageableComponents;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,7 +17,7 @@ public class Home extends JPanel {
         this.add(Header, new GridBagConstraints(0,0,0,0,1,1,GridBagConstraints.PAGE_START,0,zeroInsets,0,0));
         this.add(Shortcuts, new GridBagConstraints(0,0,0,0,1,1,GridBagConstraints.LINE_START,0, zeroInsets, 0,0));
         Shortcuts.setText("""
-                Close tabs - CTRL+W
+                Close tab - CTRL+W
                 """);
     }
 }
