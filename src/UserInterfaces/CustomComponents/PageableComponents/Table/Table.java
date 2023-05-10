@@ -4,7 +4,6 @@ import UserInterfaces.CustomComponents.Colors;
 import UserInterfaces.CustomComponents.Components.CustomPanels.SearchPanel;
 import UserInterfaces.CustomComponents.Components.dataTable;
 import UserInterfaces.CustomComponents.PageableComponents.Table.Components.InsertTable;
-import UserInterfaces.CustomComponents.Themes.TabTheme;
 
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
@@ -12,7 +11,7 @@ import java.awt.*;
 
 public class Table extends JPanel {
     public static final String NAME = "Tables";
-    public static dataTable table = new dataTable();
+    public static dataTable table;
     public Table(){
         this.setName(NAME);
         this.setLayout(new BorderLayout());

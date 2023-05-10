@@ -2,6 +2,7 @@ package UserInterfaces.CustomComponents;
 
 import java.awt.*;
 
+@SuppressWarnings("unused")
 public class Colors {
     public static final Color PRIMARY = new Color(109, 165,192);
     public static final Color SECONDARY = new Color(41,77,97);

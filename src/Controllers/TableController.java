@@ -1,35 +1,13 @@
 package Controllers;
 
-import Interfaces.IConnector;
 import javax.swing.table.DefaultTableModel;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.Vector;
 
+@SuppressWarnings("unused")
 public class TableController{
-    private static TableController controller;
-
-    IConnector database = ConnectionController.getInstance();
-
-    public static TableController getInstance(){
-        if(controller == null){
-            controller = new TableController();
-        }
-        return controller;
-    }
-
-    public DefaultTableModel getData(){
-        try{
-            PreparedStatement pt = getInstance().database.getConnection().prepareStatement("select * from test");
-            ResultSet rs = pt.executeQuery();
-            return parseResultToTable(rs);
-        }catch (SQLException e){
-            throw new RuntimeException();
-        }
-    }
-
     public static nonEditableTable parseResultToTable(ResultSet rs){
         try {
             ResultSetMetaData metaData = rs.getMetaData();
@@ -59,6 +37,7 @@ public class TableController{
 
 class nonEditableTable extends DefaultTableModel{
 
+    @SuppressWarnings("unused")
     public nonEditableTable(Vector<? extends Vector> data, Vector<?> columnNames){
         super(data, columnNames);
     }

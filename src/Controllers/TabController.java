@@ -1,4 +1,4 @@
-package UserInterfaces.CustomComponents.Components.CustomPanels;
+package Controllers;
 
 import UserInterfaces.CustomComponents.Components.Function.TabFunctions;
 

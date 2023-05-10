@@ -1,12 +1,14 @@
 package UserInterfaces.CustomComponents.Components.Function;
 
-import UserInterfaces.CustomComponents.Components.CustomPanels.TabController;
+import Controllers.TabController;
 import UserInterfaces.CustomComponents.Icons;
 import UserInterfaces.CustomComponents.Themes.TabTheme;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -16,6 +18,8 @@ public class TabFunctions extends JPanel {
         TabTheme.setUp();
         TabController tabController = TabController.getInstance();
         JLabel title;
+        RefreshButton refresh = new RefreshButton();
+        CloseButton close = new CloseButton();
         if(tabController.getTabCount() <= 1){
             title = new JLabel(tabController.getTitleAt(tabController.getSelectedIndex()));
         }else {
@@ -26,7 +30,8 @@ public class TabFunctions extends JPanel {
         this.add(title);
         this.setBackground(new Color(0,0,0,0));
         title.setBorder(new EmptyBorder(0,0,0,5));
-        this.add(new CloseButton());
+        this.add(refresh);
+        this.add(close);
     }
 }
 
@@ -59,5 +64,23 @@ class CloseButton extends JButton implements MouseListener {
     @Override
     public void mouseExited(MouseEvent e) {
         this.setIcon(Icons.CLOSE);
+    }
+}
+
+class RefreshButton extends JButton implements ActionListener{
+
+    public RefreshButton() {
+        super(Icons.ROTATE);
+
+        this.addActionListener(this);
+        this.setBorderPainted(false);
+        this.setToolTipText("Close Tab");
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        TabController tabController = TabController.getInstance();
+        tabController.getComponent(tabController.getSelectedIndex()).repaint();
+        tabController.getComponent(tabController.getSelectedIndex()).revalidate();
     }
 }

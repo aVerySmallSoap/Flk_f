@@ -1,45 +1,30 @@
 package Controllers;
 
-import Interfaces.IPassableConnector;
+import Interfaces.IConnector;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConnectionController extends IPassableConnector {
+@SuppressWarnings("unused")
+public class ConnectionController implements IConnector {
 
-    private static ConnectionController controller;
+    private final String SCHEMA;
+    private final String User;
+    private final String Pass;
+    public static boolean isConnected = false;
 
-    private ConnectionController(){}
-
-
-    public static ConnectionController getInstance(){
-        if(controller == null){
-            controller = new ConnectionController();
-        }
-        return controller;
+    public ConnectionController(String URL, String User, String Pass){
+        this.SCHEMA = URL;
+        this.User = User;
+        this.Pass = Pass;
     }
 
-    public Connection getConnection(String URL) {
+    @Override
+    public Connection getConnection(){
         try{
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/"+URL.trim(), "root","root");
-        }catch (SQLException ex){
-            throw new RuntimeException();
-        }
-    }
-
-    public Connection getConnection(String URL, String User) {
-        try{
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/"+URL.trim(), User,"");
-        }catch (SQLException ex){
-            throw new RuntimeException();
-        }
-    }
-
-    public Connection getConnection(String URL, String User, String Pass) {
-        try{
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/"+URL.trim(), User,Pass);
-        }catch (SQLException ex){
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/"+SCHEMA.trim(), User.trim(), Pass.trim());
+        }catch (SQLException e){
             throw new RuntimeException();
         }
     }

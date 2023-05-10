@@ -1,5 +1,6 @@
 package UserInterfaces.CustomComponents.Components.CustomPanels;
 
+import Controllers.TabController;
 import UserInterfaces.CustomComponents.Colors;
 
 import javax.swing.*;
@@ -18,6 +19,7 @@ public class CenterPanel extends JPanel {
     }
 
     public static void Refresh(){
+        centerPanel.repaint();
         centerPanel.revalidate();
     }
 

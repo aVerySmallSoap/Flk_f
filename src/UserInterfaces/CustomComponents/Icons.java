@@ -21,6 +21,7 @@ public class Icons extends ResourceLocator {
     private static final Image table = new ImageIcon(getResource("table.png")).getImage();
     private static final Image insertTable = new ImageIcon(getResource("InsertTable.png")).getImage();
     private static final Image search = new ImageIcon(getResource("search.png")).getImage();
+    private static final Image rotate = new ImageIcon(getResource("rotate_arrow.png")).getImage();
     public static final ImageIcon FILE = new ImageIcon(file.getScaledInstance(16,16,Image.SCALE_SMOOTH));
     public static final ImageIcon HOME = new ImageIcon(home.getScaledInstance(16,16,Image.SCALE_SMOOTH));
     public static final ImageIcon USERS = new ImageIcon(users.getScaledInstance(16,16,Image.SCALE_SMOOTH));
@@ -29,5 +30,6 @@ public class Icons extends ResourceLocator {
     public static final ImageIcon SEARCH = new ImageIcon(search.getScaledInstance(16,16,Image.SCALE_SMOOTH));
     public static final ImageIcon INSERTABLE = new ImageIcon(insertTable.getScaledInstance(16,16,Image.SCALE_SMOOTH));
     public static final ImageIcon CLOSE = new ImageIcon(close.getScaledInstance(8,8,Image.SCALE_SMOOTH));
+    public static final ImageIcon ROTATE = new ImageIcon(rotate.getScaledInstance(12,12,Image.SCALE_SMOOTH));
     public static final ImageIcon HOVER_CLOSE = new ImageIcon(hoverClose.getScaledInstance(10,10,Image.SCALE_SMOOTH));
 }

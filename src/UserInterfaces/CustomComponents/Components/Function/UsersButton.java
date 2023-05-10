@@ -1,7 +1,7 @@
 package UserInterfaces.CustomComponents.Components.Function;
 
 import UserInterfaces.CustomComponents.Components.CustomPanels.CenterPanel;
-import UserInterfaces.CustomComponents.Components.CustomPanels.TabController;
+import Controllers.TabController;
 import UserInterfaces.CustomComponents.Icons;
 import UserInterfaces.CustomComponents.PageableComponents.Users;
 
