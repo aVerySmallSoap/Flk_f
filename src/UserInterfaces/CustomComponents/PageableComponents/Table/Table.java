@@ -19,10 +19,10 @@ public class Table extends JPanel {
         SearchPanel searchPanel = new SearchPanel();
 
         this.add(BottomInfo, BorderLayout.SOUTH);
-        BottomInfo.add(new JLabel("Testing"));
+        BottomInfo.add(new JLabel("Bottom Panel components go here"));
         BottomInfo.setBorder(new MatteBorder(1,0,0,0, Colors.PRIMARY));
         this.add(RightLead, BorderLayout.EAST);
-        RightLead.add(new JLabel("Testing"));
+        RightLead.add(new JLabel("Right Panel components go here"));
         RightLead.setBorder(new MatteBorder(0,1,0,0, Colors.PRIMARY));
         this.add(scrollPane, BorderLayout.CENTER);
         this.add(searchPanel, BorderLayout.NORTH);

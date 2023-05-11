@@ -10,8 +10,12 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ConnnectToDB extends JButton implements ActionListener {
-    public ConnnectToDB() {
+public class ConnectToDB extends JButton implements ActionListener {
+
+    JFrame parent;
+
+    public ConnectToDB(JFrame parent) {
+        this.parent = parent;
         this.setText("Connect");
         this.addActionListener(this);
     }
@@ -24,8 +28,10 @@ public class ConnnectToDB extends JButton implements ActionListener {
 
         if (!IValidator.isNullOnBoth(user, pass)) {
             TabController.getInstance().addTab(Table.NAME, new Table(new dataTable(new ConnectionController(schema, user, pass))));
+            parent.dispose();
         } else {
             TabController.getInstance().addTab(Table.NAME, new Table(new dataTable(new ConnectionController(schema, "root", "root"))));
+            parent.dispose();
         }
     }
 
