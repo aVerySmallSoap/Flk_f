@@ -6,11 +6,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class DBEntryPanel extends JFrame{
-    @SuppressWarnings("CanBeFinal")
-    GridBagConstraints constraints = new GridBagConstraints();
-    public static JTextField databaseField = new JTextField(25);
-    public static JTextField userField = new JTextField(25);
-    public static JPasswordField passField = new JPasswordField(25);
+    private final JTextField databaseField = new JTextField(25);
+    private final JTextField userField = new JTextField(25);
+    private final JPasswordField passField = new JPasswordField(25);
 
     private void init() {
         FlatLightLaf.setup();
@@ -24,6 +22,8 @@ public class DBEntryPanel extends JFrame{
         JLabel userTag = new JLabel("User:");
         JLabel passTag = new JLabel("Pass:");
         ConnectToDB connect = new ConnectToDB(this);
+        GridBagConstraints constraints = new GridBagConstraints();
+
 
         constraints.gridx = 0;
         constraints.gridy = 0;
@@ -51,5 +51,15 @@ public class DBEntryPanel extends JFrame{
 
     public void run() {
         init();
+    }
+
+    public String getSchema(){
+        return databaseField.getText();
+    }
+    public String getUser(){
+        return userField.getText();
+    }
+    public String getPass(){
+        return String.valueOf(passField.getPassword());
     }
 }

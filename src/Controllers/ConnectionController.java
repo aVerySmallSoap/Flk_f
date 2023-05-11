@@ -12,7 +12,6 @@ public class ConnectionController implements IConnector {
     private final String SCHEMA;
     private final String User;
     private final String Pass;
-    public static boolean isConnected = false;
 
     public ConnectionController(String URL, String User, String Pass){
         this.SCHEMA = URL;
