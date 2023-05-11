@@ -3,7 +3,6 @@ package UserInterfaces.CustomComponents.PageableComponents.Table;
 import UserInterfaces.CustomComponents.Colors;
 import UserInterfaces.CustomComponents.Components.CustomPanels.SearchPanel;
 import UserInterfaces.CustomComponents.Components.dataTable;
-import UserInterfaces.CustomComponents.PageableComponents.Table.Components.InsertTable;
 
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
@@ -11,8 +10,7 @@ import java.awt.*;
 
 public class Table extends JPanel {
     public static final String NAME = "Tables";
-    public static dataTable table;
-    public Table(){
+    public Table(dataTable table){
         this.setName(NAME);
         this.setLayout(new BorderLayout());
         JPanel BottomInfo = new JPanel();

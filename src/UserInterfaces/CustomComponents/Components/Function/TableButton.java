@@ -3,6 +3,7 @@ package UserInterfaces.CustomComponents.Components.Function;
 import UserInterfaces.CustomComponents.Components.CustomPanels.CenterPanel;
 import Controllers.TabController;
 import UserInterfaces.CustomComponents.Icons;
+import UserInterfaces.CustomComponents.PageableComponents.Table.Components.DBEntryPanel;
 import UserInterfaces.CustomComponents.PageableComponents.Table.Table;
 
 import javax.swing.*;
@@ -18,7 +19,7 @@ public class TableButton extends JButton implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        TabController.getInstance().addTab(Table.NAME, new Table());
+        new DBEntryPanel().run();
         CenterPanel.Refresh();
     }
 }

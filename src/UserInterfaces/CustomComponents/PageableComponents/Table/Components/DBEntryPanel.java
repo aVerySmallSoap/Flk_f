@@ -5,13 +5,16 @@ import com.formdev.flatlaf.FlatLightLaf;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ComponentListener;
+import java.util.EventListener;
 
-public class DBEntryPanel extends JFrame {
+public class DBEntryPanel extends JFrame implements ActionListener {
     @SuppressWarnings("CanBeFinal")
     GridBagConstraints constraints = new GridBagConstraints();
-    public static final JTextField databaseField = new JTextField(25);
-    public static final JTextField userField = new JTextField(25);
-    public static final JPasswordField passField = new JPasswordField(25);
+    public static JTextField databaseField = new JTextField(25);
+    public static JTextField userField = new JTextField(25);
+    public static JPasswordField passField = new JPasswordField(25);
 
     private void init() {
         FlatLightLaf.setup();
@@ -52,5 +55,9 @@ public class DBEntryPanel extends JFrame {
 
     public void run() {
         init();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent actionEvent) {
     }
 }

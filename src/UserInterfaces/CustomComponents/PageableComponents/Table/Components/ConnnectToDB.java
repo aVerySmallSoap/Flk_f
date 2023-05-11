@@ -1,6 +1,7 @@
 package UserInterfaces.CustomComponents.PageableComponents.Table.Components;
 
 import Controllers.ConnectionController;
+import Controllers.TabController;
 import Interfaces.IValidator;
 import UserInterfaces.CustomComponents.Components.dataTable;
 import UserInterfaces.CustomComponents.PageableComponents.Table.Table;
@@ -22,9 +23,10 @@ public class ConnnectToDB extends JButton implements ActionListener {
         String pass = String.valueOf(DBEntryPanel.passField.getPassword());
 
         if (!IValidator.isNullOnBoth(user, pass)) {
-            Table.table = new dataTable(new ConnectionController(schema, user, pass));
+            TabController.getInstance().addTab(Table.NAME, new Table(new dataTable(new ConnectionController(schema, user, pass))));
         } else {
-            Table.table = new dataTable(new ConnectionController(schema, "root", "root"));
+            TabController.getInstance().addTab(Table.NAME, new Table(new dataTable(new ConnectionController(schema, "root", "root"))));
         }
     }
+
 }
