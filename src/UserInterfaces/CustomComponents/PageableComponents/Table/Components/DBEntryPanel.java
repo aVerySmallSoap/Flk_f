@@ -10,6 +10,16 @@ public class DBEntryPanel extends JFrame{
     private final JTextField userField = new JTextField(25);
     private final JPasswordField passField = new JPasswordField(25);
 
+    public String getSchema(){
+        return databaseField.getText();
+    }
+    public String getUser(){
+        return userField.getText();
+    }
+    public String getPass(){
+        return String.valueOf(passField.getPassword());
+    }
+
     private void init() {
         FlatLightLaf.setup();
         this.setSize(new Dimension(400, 250));
@@ -51,15 +61,5 @@ public class DBEntryPanel extends JFrame{
 
     public void run() {
         init();
-    }
-
-    public String getSchema(){
-        return databaseField.getText();
-    }
-    public String getUser(){
-        return userField.getText();
-    }
-    public String getPass(){
-        return String.valueOf(passField.getPassword());
     }
 }
