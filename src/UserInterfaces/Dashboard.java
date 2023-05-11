@@ -1,7 +1,6 @@
 package UserInterfaces;
 
 import UserInterfaces.CustomComponents.Components.CustomPanels.CenterPanel;
-import UserInterfaces.CustomComponents.Components.CustomPanels.leftStructurePanel;
 import UserInterfaces.CustomComponents.Components.CustomPanels.frameMenu;
 import UserInterfaces.CustomComponents.Components.CustomPanels.navigationPanel;
 import UserInterfaces.CustomComponents.Fonts;
@@ -22,8 +21,6 @@ public class Dashboard extends JFrame{
 
     private void init(){
         frameMenu topMenu = new frameMenu();
-        var topPanel = navigationPanel.getInstance();
-        var leftPanel = leftStructurePanel.getInstance();
 
         this.setTitle("Dashboard");
         this.setVisible(true);
@@ -33,9 +30,13 @@ public class Dashboard extends JFrame{
         this.setLayout(new BorderLayout());
         this.setJMenuBar(topMenu);
 
-        this.add(topPanel, BorderLayout.NORTH);
-        this.add(leftPanel, BorderLayout.WEST);
+        this.add(navigationPanel.getInstance(), BorderLayout.WEST);
         this.add(CenterPanel.getInstance(), BorderLayout.CENTER);
+    }
+
+    public void Refresh(){
+        this.repaint();
+        this.revalidate();
     }
 
 

@@ -7,5 +7,6 @@ public class testingUI {
         ThemeLoader.LoadThemes();
         FlatLightLaf.setup();
         Dashboard.run();
+        Dashboard.getInstance().Refresh();
     }
 }

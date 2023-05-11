@@ -17,9 +17,9 @@ public class ConnnectToDB extends JButton implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String schema = InsertPanel.databaseField.getText();
-        String user = InsertPanel.userField.getText();
-        String pass = String.valueOf(InsertPanel.passField.getPassword());
+        String schema = DBEntryPanel.databaseField.getText();
+        String user = DBEntryPanel.userField.getText();
+        String pass = String.valueOf(DBEntryPanel.passField.getPassword());
 
         if (!IValidator.isNullOnBoth(user, pass)) {
             Table.table = new dataTable(new ConnectionController(schema, user, pass));

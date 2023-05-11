@@ -15,15 +15,11 @@ public class Table extends JPanel {
     public Table(){
         this.setName(NAME);
         this.setLayout(new BorderLayout());
-        JPanel TreeLeft = new JPanel();
         JPanel BottomInfo = new JPanel();
         JPanel RightLead = new JPanel();
         JScrollPane scrollPane = new JScrollPane(table);
         SearchPanel searchPanel = new SearchPanel();
 
-        this.add(TreeLeft, BorderLayout.WEST);
-        TreeLeft.add(new InsertTable());
-        TreeLeft.setBorder(new MatteBorder(0,0,0,1, Colors.PRIMARY));
         this.add(BottomInfo, BorderLayout.SOUTH);
         BottomInfo.add(new JLabel("Testing"));
         BottomInfo.setBorder(new MatteBorder(1,0,0,0, Colors.PRIMARY));
