@@ -1,10 +1,8 @@
-package UserInterfaces.CustomComponents.Components.Function;
+package UserInterfaces.CustomComponents.Components.CustomButtons;
 
-import UserInterfaces.CustomComponents.Components.CustomPanels.CenterPanel;
-import Controllers.TabController;
+import UserInterfaces.CustomComponents.Components.CustomPanels.Singletons.CenterPanel;
 import UserInterfaces.CustomComponents.Icons;
-import UserInterfaces.CustomComponents.PageableComponents.Table.Components.DBEntryPanel;
-import UserInterfaces.CustomComponents.PageableComponents.Table.Table;
+import UserInterfaces.CustomComponents.Components.PageableComponents.Table.Components.DBEntryPanel;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

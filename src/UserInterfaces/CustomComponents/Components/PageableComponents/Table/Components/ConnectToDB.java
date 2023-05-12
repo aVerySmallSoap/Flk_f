@@ -1,10 +1,10 @@
-package UserInterfaces.CustomComponents.PageableComponents.Table.Components;
+package UserInterfaces.CustomComponents.Components.PageableComponents.Table.Components;
 
 import Controllers.ConnectionController;
 import Controllers.TabController;
 import Interfaces.IValidator;
 import UserInterfaces.CustomComponents.Components.dataTable;
-import UserInterfaces.CustomComponents.PageableComponents.Table.Table;
+import UserInterfaces.CustomComponents.Components.PageableComponents.Table.Table;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

@@ -1,4 +1,4 @@
-package UserInterfaces.CustomComponents.PageableComponents.Table;
+package UserInterfaces.CustomComponents.Components.PageableComponents.Table;
 
 import UserInterfaces.CustomComponents.Colors;
 import UserInterfaces.CustomComponents.Components.CustomPanels.SearchPanel;

@@ -1,4 +1,4 @@
-package UserInterfaces.CustomComponents.PageableComponents;
+package UserInterfaces.CustomComponents.Components.PageableComponents;
 
 import javax.swing.*;
 import java.awt.*;

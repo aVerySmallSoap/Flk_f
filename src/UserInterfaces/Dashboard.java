@@ -1,8 +1,8 @@
 package UserInterfaces;
 
-import UserInterfaces.CustomComponents.Components.CustomPanels.CenterPanel;
-import UserInterfaces.CustomComponents.Components.CustomPanels.frameMenu;
-import UserInterfaces.CustomComponents.Components.CustomPanels.navigationPanel;
+import UserInterfaces.CustomComponents.Components.CustomPanels.Singletons.CenterPanel;
+import UserInterfaces.CustomComponents.Components.CustomPanels.Singletons.frameMenu;
+import UserInterfaces.CustomComponents.Components.CustomPanels.Singletons.navigationPanel;
 import UserInterfaces.CustomComponents.Fonts;
 
 import javax.swing.*;

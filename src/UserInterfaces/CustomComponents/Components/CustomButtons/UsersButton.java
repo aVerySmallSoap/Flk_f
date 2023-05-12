@@ -1,9 +1,9 @@
-package UserInterfaces.CustomComponents.Components.Function;
+package UserInterfaces.CustomComponents.Components.CustomButtons;
 
-import UserInterfaces.CustomComponents.Components.CustomPanels.CenterPanel;
+import UserInterfaces.CustomComponents.Components.CustomPanels.Singletons.CenterPanel;
 import Controllers.TabController;
 import UserInterfaces.CustomComponents.Icons;
-import UserInterfaces.CustomComponents.PageableComponents.Users;
+import UserInterfaces.CustomComponents.Components.PageableComponents.Customers;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -18,7 +18,7 @@ public class UsersButton extends JButton implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        TabController.getInstance().addTab(Users.NAME, new Users());
+        TabController.getInstance().addTab(Customers.NAME, new Customers());
         CenterPanel.Refresh();
     }
 }

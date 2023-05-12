@@ -1,4 +1,4 @@
-package UserInterfaces.CustomComponents.Components.CustomPanels;
+package UserInterfaces.CustomComponents.Components.CustomPanels.Singletons;
 
 import javax.swing.*;
 
