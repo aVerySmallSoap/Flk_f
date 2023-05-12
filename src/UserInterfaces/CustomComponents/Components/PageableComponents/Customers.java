@@ -1,7 +1,7 @@
 package UserInterfaces.CustomComponents.Components.PageableComponents;
 
 import UserInterfaces.CustomComponents.Colors;
-import UserInterfaces.CustomComponents.Components.CustomPanels.CustomerRegistration;
+import UserInterfaces.CustomComponents.Components.CustomPanels.CustomerDataPanel;
 import UserInterfaces.CustomComponents.Components.CustomPanels.SearchPanel;
 import UserInterfaces.CustomComponents.Themes.SplitTheme;
 
@@ -21,7 +21,7 @@ public class Customers extends JPanel {
         JPanel tablePanel = new JPanel(new BorderLayout());
         JPanel tableBottomPadding = new JPanel();
         JSplitPane split = new JSplitPane();
-        CustomerRegistration customer = new CustomerRegistration();
+        CustomerDataPanel customer = new CustomerDataPanel();
 
         split.setResizeWeight(1);
         this.add(split, BorderLayout.CENTER);

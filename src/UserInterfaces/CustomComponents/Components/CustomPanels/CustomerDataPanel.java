@@ -4,9 +4,9 @@ import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
 
-public class CustomerRegistration extends JPanel {
+public class CustomerDataPanel extends JPanel {
 
-    public CustomerRegistration(){
+    public CustomerDataPanel(){
         GridBagConstraints constraints = new GridBagConstraints();
         TitledBorder titledBorder = new TitledBorder("Customer Data");
         JLabel firstNameLabel = new JLabel("First Name");
