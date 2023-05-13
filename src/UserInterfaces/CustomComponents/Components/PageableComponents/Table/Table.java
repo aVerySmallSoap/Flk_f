@@ -10,13 +10,19 @@ import java.awt.*;
 
 public class Table extends JPanel {
     public static final String NAME = "Tables";
+    private dataTable table;
     public Table(dataTable table){
+        this.table = table;
+        init();
+    }
+
+    private void init(){
         this.setName(NAME);
         this.setLayout(new BorderLayout());
         JPanel BottomInfo = new JPanel();
         JPanel RightLead = new JPanel();
         JScrollPane scrollPane = new JScrollPane(table);
-        SearchPanel searchPanel = new SearchPanel();
+        SearchPanel searchPanel = new SearchPanel(table);
 
         this.add(BottomInfo, BorderLayout.SOUTH);
         BottomInfo.add(new JLabel("Bottom Panel components go here"));
