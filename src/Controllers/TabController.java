@@ -28,7 +28,11 @@ public class TabController extends JTabbedPane implements ChangeListener, MouseL
         this.getActionMap().put("CLOSE_TAB", new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                removeTabAt(getSelectedIndex());
+                try{
+                    removeTabAt(getSelectedIndex());
+                }catch (IndexOutOfBoundsException ex){
+                    System.out.println("User tried to close no tabs!");
+                }
             }
         });
     }
