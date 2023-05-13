@@ -14,6 +14,8 @@ import java.awt.*;
 
 public class Customers extends JPanel {
     public static final String NAME = "Customers";
+    // Customer ID generation pattern: COUNTRY-GENDER-FIRST_LETTER_OF_FIRSTNAME-FIRST_LETTER_OF_LASTNAME-9~11_DIGIT_OF_PHONE
+
     public Customers(){
         SplitTheme.setUp();
         this.setName(NAME);
