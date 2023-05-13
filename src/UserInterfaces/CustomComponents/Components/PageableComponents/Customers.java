@@ -1,8 +1,10 @@
 package UserInterfaces.CustomComponents.Components.PageableComponents;
 
+import Controllers.ConnectionController;
 import UserInterfaces.CustomComponents.Colors;
 import UserInterfaces.CustomComponents.Components.CustomPanels.CustomerDataPanel;
 import UserInterfaces.CustomComponents.Components.CustomPanels.SearchPanel;
+import UserInterfaces.CustomComponents.Components.dataTable;
 import UserInterfaces.CustomComponents.Themes.SplitTheme;
 
 import javax.swing.*;
@@ -16,7 +18,7 @@ public class Customers extends JPanel {
         SplitTheme.setUp();
         this.setName(NAME);
         this.setLayout(new BorderLayout());
-        JTable table = new JTable(5,5);
+        dataTable table = new dataTable(new ConnectionController("","",""));
         JScrollPane scrollPane = new JScrollPane(table);
         JPanel tablePanel = new JPanel(new BorderLayout());
         JPanel tableBottomPadding = new JPanel();
@@ -26,7 +28,7 @@ public class Customers extends JPanel {
         split.setResizeWeight(1);
         this.add(split, BorderLayout.CENTER);
 
-        tablePanel.add(new SearchPanel(), BorderLayout.NORTH);
+        tablePanel.add(new SearchPanel(table), BorderLayout.NORTH);
         scrollPane.setBorder(new EmptyBorder(1,1,1,1));
         tablePanel.add(scrollPane, BorderLayout.CENTER);
         tablePanel.add(tableBottomPadding, BorderLayout.SOUTH);
