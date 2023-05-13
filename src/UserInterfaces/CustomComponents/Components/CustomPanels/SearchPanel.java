@@ -1,6 +1,7 @@
 package UserInterfaces.CustomComponents.Components.CustomPanels;
 
 import UserInterfaces.CustomComponents.Colors;
+import UserInterfaces.CustomComponents.Components.dataTable;
 import UserInterfaces.CustomComponents.Icons;
 
 import javax.swing.*;
@@ -10,7 +11,15 @@ import java.awt.*;
 
 public class SearchPanel extends JPanel {
 
-    public SearchPanel(){
+
+    @SuppressWarnings("FieldMayBeFinal")
+    private dataTable table;
+    public SearchPanel(dataTable table){
+        this.table = table;
+        init();
+    }
+
+    private void init(){
         this.setLayout(new FlowLayout(FlowLayout.LEADING));
         JTextField search = new JTextField();
         JLabel ICON = new JLabel(Icons.SEARCH);
