@@ -1,12 +1,19 @@
 package UserInterfaces.CustomComponents.Components.CustomPanels;
 
+import Interfaces.Initializable;
+
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
 
-public class CustomerDataPanel extends JPanel {
+public class CustomerDataPanel extends JPanel implements Initializable {
 
     public CustomerDataPanel(){
+        init();
+    }
+
+    @Override
+    public void init() {
         GridBagConstraints constraints = new GridBagConstraints();
         TitledBorder titledBorder = new TitledBorder("Customer Data");
         JLabel firstNameLabel = new JLabel("First Name");
@@ -61,6 +68,5 @@ public class CustomerDataPanel extends JPanel {
         constraints.weightx = 1;
         constraints.weighty = 1;
         this.add(Box.createRigidArea(new Dimension(0,0)), constraints);
-
     }
 }

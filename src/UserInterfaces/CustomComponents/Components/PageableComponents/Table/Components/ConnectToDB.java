@@ -3,6 +3,7 @@ package UserInterfaces.CustomComponents.Components.PageableComponents.Table.Comp
 import Controllers.ConnectionController;
 import Controllers.TabController;
 import Interfaces.IValidator;
+import Interfaces.Initializable;
 import UserInterfaces.CustomComponents.Components.dataTable;
 import UserInterfaces.CustomComponents.Components.PageableComponents.Table.Table;
 
@@ -10,12 +11,17 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ConnectToDB extends JButton implements ActionListener {
+public class ConnectToDB extends JButton implements Initializable,ActionListener {
 
     DBEntryPanel parent;
 
     public ConnectToDB(DBEntryPanel parent) {
         this.parent = parent;
+        init();
+    }
+
+    @Override
+    public void init() {
         this.setText("Connect");
         this.addActionListener(this);
     }

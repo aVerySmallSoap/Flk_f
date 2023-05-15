@@ -1,6 +1,7 @@
 package UserInterfaces.CustomComponents.Components.Function;
 
 import Controllers.TabController;
+import Interfaces.Initializable;
 import UserInterfaces.CustomComponents.Icons;
 import UserInterfaces.CustomComponents.Themes.TabTheme;
 
@@ -12,9 +13,14 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class TabFunctions extends JPanel {
+public class TabFunctions extends JPanel implements Initializable {
 
     public TabFunctions() {
+        init();
+    }
+
+    @Override
+    public void init() {
         TabTheme.setUp();
         TabController tabController = TabController.getInstance();
         JLabel title;

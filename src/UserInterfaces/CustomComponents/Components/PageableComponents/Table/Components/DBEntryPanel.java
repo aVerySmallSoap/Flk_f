@@ -1,11 +1,12 @@
 package UserInterfaces.CustomComponents.Components.PageableComponents.Table.Components;
 
+import Interfaces.Initializable;
 import com.formdev.flatlaf.FlatLightLaf;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class DBEntryPanel extends JFrame{
+public class DBEntryPanel extends JFrame implements Initializable {
     private final JTextField databaseField = new JTextField(25);
     private final JTextField userField = new JTextField(25);
     private final JPasswordField passField = new JPasswordField(25);
@@ -20,7 +21,8 @@ public class DBEntryPanel extends JFrame{
         return String.valueOf(passField.getPassword());
     }
 
-    private void init() {
+    @Override
+    public void init() {
         FlatLightLaf.setup();
         this.setSize(new Dimension(400, 250));
         this.setVisible(true);
@@ -57,9 +59,5 @@ public class DBEntryPanel extends JFrame{
         constraints.gridx = 1;
         constraints.gridy = 3;
         this.add(connect, constraints);
-    }
-
-    public void run() {
-        init();
     }
 }

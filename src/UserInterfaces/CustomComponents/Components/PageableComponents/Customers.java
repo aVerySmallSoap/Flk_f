@@ -1,6 +1,7 @@
 package UserInterfaces.CustomComponents.Components.PageableComponents;
 
 import Controllers.ConnectionController;
+import Interfaces.Initializable;
 import UserInterfaces.CustomComponents.Colors;
 import UserInterfaces.CustomComponents.Components.CustomPanels.CustomerDataPanel;
 import UserInterfaces.CustomComponents.Components.CustomPanels.SearchPanel;
@@ -12,11 +13,16 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
 import java.awt.*;
 
-public class Customers extends JPanel {
+public class Customers extends JPanel implements Initializable {
     public static final String NAME = "Customers";
     // Customer ID generation pattern: COUNTRY-GENDER-FIRST_LETTER_OF_FIRSTNAME-FIRST_LETTER_OF_LASTNAME-9~11_DIGIT_OF_PHONE
 
     public Customers(){
+        init();
+    }
+
+    @Override
+    public void init() {
         SplitTheme.setUp();
         this.setName(NAME);
         this.setLayout(new BorderLayout());
@@ -39,7 +45,6 @@ public class Customers extends JPanel {
         tablePanel.setMinimumSize(new Dimension(650,0));
         tablePanel.setBorder(new MatteBorder(0,0,0,1, Colors.PRIMARY));
         split.setLeftComponent(tablePanel);
-
 
         split.setRightComponent(customer);
     }

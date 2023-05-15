@@ -1,5 +1,6 @@
 package UserInterfaces.CustomComponents.Components.PageableComponents.Table;
 
+import Interfaces.Initializable;
 import UserInterfaces.CustomComponents.Colors;
 import UserInterfaces.CustomComponents.Components.CustomPanels.SearchPanel;
 import UserInterfaces.CustomComponents.Components.dataTable;
@@ -8,7 +9,7 @@ import javax.swing.*;
 import javax.swing.border.MatteBorder;
 import java.awt.*;
 
-public class Table extends JPanel {
+public class Table extends JPanel implements Initializable {
     public static final String NAME = "Tables";
     private dataTable table;
     public Table(dataTable table){
@@ -16,7 +17,8 @@ public class Table extends JPanel {
         init();
     }
 
-    private void init(){
+    @Override
+    public void init(){
         this.setName(NAME);
         this.setLayout(new BorderLayout());
         JPanel BottomInfo = new JPanel();

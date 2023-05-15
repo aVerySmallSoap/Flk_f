@@ -1,12 +1,19 @@
 package UserInterfaces.CustomComponents.Components.PageableComponents;
 
+import Interfaces.Initializable;
+
 import javax.swing.*;
 import java.awt.*;
 
-public class Home extends JPanel {
+public class Home extends JPanel implements Initializable {
     public static final String NAME = "Home";
 
     public Home(){
+        init();
+    }
+
+    @Override
+    public void init() {
         this.setName(NAME);
         this.setLayout(new BorderLayout());
         JPanel topWrapper = new JPanel(new FlowLayout(FlowLayout.CENTER));
