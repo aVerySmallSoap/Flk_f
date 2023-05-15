@@ -13,8 +13,8 @@ public class ConnectionController implements IConnector {
     private final String User;
     private final String Pass;
 
-    public ConnectionController(String URL, String User, String Pass){
-        this.SCHEMA = URL;
+    public ConnectionController(String Schema, String User, String Pass){
+        this.SCHEMA = Schema;
         this.User = User;
         this.Pass = Pass;
     }
