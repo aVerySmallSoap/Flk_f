@@ -22,14 +22,23 @@ public class SearchPanel extends JPanel implements Initializable {
 
     @Override
     public void init(){
-        this.setLayout(new FlowLayout(FlowLayout.LEADING));
+        GridBagConstraints constraints = new GridBagConstraints();
+
+        this.setLayout(new GridBagLayout());
         JTextField search = new JTextField();
         JLabel ICON = new JLabel(Icons.SEARCH);
 
-        this.add(ICON);
-        ICON.setBorder(new EmptyBorder(0,25,0,0));
-        this.add(search);
-        search.setColumns(50);
+        constraints.anchor = GridBagConstraints.FIRST_LINE_START;
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        constraints.insets = new Insets(5,20,5,0);
+        this.add(ICON, constraints);
+        constraints.gridx = 1;
+        constraints.weightx = 1;
+        constraints.weighty = 1;
+        search.setColumns(25);
+        search.setMinimumSize(new Dimension(500,500));
+        this.add(search, constraints);
 
         this.setBorder(new MatteBorder(0,0,1,0, Colors.PRIMARY));
     }

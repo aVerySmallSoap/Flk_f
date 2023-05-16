@@ -28,7 +28,7 @@ public class dataTable extends JTable implements Initializable {
         this.table = table;
         init();
     }
-
+    
     @Override
     public void init() {
         this.setModel(new customTableModel(new TableController(), this));
@@ -87,5 +87,10 @@ class customTableModel extends AbstractTableModel{
     public Object getValueAt(int rowIndex, int columnIndex) {
         Vector<Object> temp = rows.elementAt(rowIndex);
         return temp.elementAt(columnIndex);
+    }
+
+    @Override
+    public String getColumnName(int column) {
+        return columns.get(column);
     }
 }
