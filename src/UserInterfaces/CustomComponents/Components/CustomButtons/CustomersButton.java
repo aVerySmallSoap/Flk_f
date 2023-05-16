@@ -10,8 +10,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class UsersButton extends JButton implements Initializable,ActionListener {
-    public UsersButton(){
+public class CustomersButton extends JButton implements Initializable,ActionListener {
+    public CustomersButton(){
         init();
     }
 
@@ -19,7 +19,7 @@ public class UsersButton extends JButton implements Initializable,ActionListener
     public void init() {
         this.addActionListener(this);
         this.setIcon(Icons.USERS);
-        this.setToolTipText("Users");
+        this.setToolTipText("Customers");
     }
 
     @Override

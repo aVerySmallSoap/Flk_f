@@ -4,7 +4,7 @@ import UserInterfaces.CustomComponents.Colors;
 import UserInterfaces.CustomComponents.Components.CustomButtons.HomeButton;
 import UserInterfaces.CustomComponents.Components.CustomButtons.SettingsButton;
 import UserInterfaces.CustomComponents.Components.CustomButtons.TableButton;
-import UserInterfaces.CustomComponents.Components.CustomButtons.UsersButton;
+import UserInterfaces.CustomComponents.Components.CustomButtons.CustomersButton;
 import UserInterfaces.CustomComponents.Themes.navigationPanelTheme;
 
 import javax.swing.*;
@@ -30,7 +30,7 @@ public class navigationPanel extends JPanel {
 
         JToolBar toolBar = new JToolBar();
         HomeButton Home = new HomeButton();
-        UsersButton Users = new UsersButton();
+        CustomersButton Users = new CustomersButton();
         SettingsButton Settings = new SettingsButton();
         TableButton Tables = new TableButton();
 

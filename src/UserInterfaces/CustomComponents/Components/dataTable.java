@@ -1,7 +1,6 @@
 package UserInterfaces.CustomComponents.Components;
 
-import Controllers.CustomerTableController;
-import Interfaces.TableController;
+import Controllers.TableController;
 import Interfaces.IConnector;
 import Interfaces.Initializable;
 
@@ -32,7 +31,7 @@ public class dataTable extends JTable implements Initializable {
 
     @Override
     public void init() {
-        this.setModel(new customTableModel(new CustomerTableController(), this));
+        this.setModel(new customTableModel(new TableController(), this));
         this.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
     }
 
