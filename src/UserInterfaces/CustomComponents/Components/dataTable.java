@@ -5,6 +5,8 @@ import Interfaces.IConnector;
 import Interfaces.Initializable;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.table.AbstractTableModel;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,7 +15,7 @@ import java.sql.SQLException;
 import java.util.Vector;
 
 @SuppressWarnings("unused")
-public class dataTable extends JTable implements Initializable {
+public class dataTable extends JTable implements Initializable{
 
     private final IConnector connector;
     private String table;
@@ -32,7 +34,7 @@ public class dataTable extends JTable implements Initializable {
     @Override
     public void init() {
         this.setModel(new customTableModel(new TableController(), this));
-        this.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        this.setSelectionModel(new customSelectionModel(this));
     }
 
     public String getTable() {
@@ -43,7 +45,7 @@ public class dataTable extends JTable implements Initializable {
         return connector;
     }
 }
-class customTableModel extends AbstractTableModel{
+class customTableModel extends AbstractTableModel {
 
     TableController controller;
     dataTable dataTable;
@@ -92,5 +94,27 @@ class customTableModel extends AbstractTableModel{
     @Override
     public String getColumnName(int column) {
         return columns.get(column);
+    }
+}
+
+class customSelectionModel extends DefaultListSelectionModel implements ListSelectionListener {
+
+    dataTable table;
+
+    customSelectionModel(dataTable table){
+        this.table = table;
+        this.addListSelectionListener(this);
+        this.setSelectionMode(SINGLE_SELECTION);
+    }
+
+    @Override
+    @SuppressWarnings("MismatchedQueryAndUpdateOfCollection")
+    public void valueChanged(ListSelectionEvent e) {
+        if(!e.getValueIsAdjusting()){
+            Vector<Object> selectedValues = new Vector<>();
+            for (int i = 0; i < table.getColumnCount(); i++) {
+                selectedValues.add(table.getValueAt(table.getSelectedRow(), i));
+            }
+        }
     }
 }
