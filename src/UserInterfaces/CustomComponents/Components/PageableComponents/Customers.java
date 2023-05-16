@@ -26,7 +26,12 @@ public class Customers extends JPanel implements Initializable {
         SplitTheme.setUp();
         this.setName(NAME);
         this.setLayout(new BorderLayout());
-        dataTable table = new dataTable(new ConnectionController("customer_orders","root","root"), "customers");
+        dataTable table = new dataTable(
+                new ConnectionController(
+                        "customer_orders",
+                        "root",
+                        "root"),
+                "customers");
         JScrollPane scrollPane = new JScrollPane(table);
         JPanel tablePanel = new JPanel(new BorderLayout());
         JPanel tableBottomPadding = new JPanel();

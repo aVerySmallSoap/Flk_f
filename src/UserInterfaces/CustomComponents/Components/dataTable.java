@@ -47,21 +47,17 @@ class customTableModel extends AbstractTableModel{
 
     TableController controller;
     dataTable dataTable;
-    ResultSet resultSet;
     ResultSetMetaData metaData;
+    ResultSet resultSet;
     Vector<String> columns;
     @SuppressWarnings("rawtypes")
     Vector<Vector> rows;
 
     customTableModel(TableController controller, dataTable dataTable){
-        this.controller = controller;
-        this.dataTable = dataTable;
-        init_table();
-    }
-
-    private void init_table(){
         try{
             try(PreparedStatement pt = dataTable.getConnector().getConnection().prepareStatement("select * from "+dataTable.getTable())){
+                this.controller = controller;
+                this.dataTable = dataTable;
                 resultSet = pt.executeQuery();
                 metaData = resultSet.getMetaData();
                 columns = controller.getColumnNames(resultSet);
