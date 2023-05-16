@@ -1,14 +1,12 @@
 package Controllers;
 
-import Interfaces.TableController;
-
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.Vector;
 
-public class CustomerTableController implements TableController {
-    @Override
+public class TableController{
+
     public Vector<String> getColumnNames(ResultSet rs){
         try{
             ResultSetMetaData metaData = rs.getMetaData();
@@ -24,21 +22,21 @@ public class CustomerTableController implements TableController {
         }
     }
 
+    /**
+     * Retrieves the data from a {@code ResultSet} to store into a Vector. <br>
+     * However, this method call is resource intensive as it implements the {@code getObject()} method to parse through the data.
+     * @param rs ResultSet to be parsed
+     * @return A Vector of vectors that holds data for each specific row and column
+     */
     @SuppressWarnings("rawtypes")
-    @Override
     public Vector<Vector> getRowData(ResultSet rs){
         try {
             ResultSetMetaData metaData = rs.getMetaData();
-
-            Vector<Vector> dataVector = new Vector<>();
+            Vector<Vector> dataVector = new Vector<>(); // Column
             while(rs.next()){
                 Vector<Object> rowValue = new Vector<>();
-                for (int i = 1; i < metaData.getColumnCount(); i++) {
-                    rowValue.add(rs.getString("ID"));
-                    rowValue.add(rs.getString("first_name"));
-                    rowValue.add(rs.getString("last_name"));
-                    rowValue.add(rs.getString("email"));
-                    rowValue.add(rs.getString("contact_num"));
+                for (int i = 1; i <= metaData.getColumnCount(); i++) {
+                    rowValue.add(rs.getObject(i));
                 }
                 dataVector.add(rowValue);
             }
