@@ -5,9 +5,17 @@ import Interfaces.Initializable;
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Vector;
 
-public class CustomerDataPanel extends JPanel implements Initializable {
+public class CustomerDataPanel extends JPanel implements Initializable{
 
+    Vector<Object> data;
+    JTextField firstNameField = new JTextField(20);
+    JTextField lastNameField = new JTextField(20);
+    JTextField addressField = new JTextField(20);
+    JTextField phoneNumberField = new JTextField(20);
     public CustomerDataPanel(){
         init();
     }
@@ -17,13 +25,9 @@ public class CustomerDataPanel extends JPanel implements Initializable {
         GridBagConstraints constraints = new GridBagConstraints();
         TitledBorder titledBorder = new TitledBorder("Customer Data");
         JLabel firstNameLabel = new JLabel("First Name");
-        JTextField firstNameField = new JTextField(20);
         JLabel lastNameLabel = new JLabel("Last Name");
-        JTextField lastNameField = new JTextField(20);
         JLabel addressLabel = new JLabel("Address");
-        JTextField addressField = new JTextField(20);
         JLabel phoneNumber = new JLabel("Phone Number");
-        JTextField phoneNumberField = new JTextField(20);
 
         this.setLayout(new GridBagLayout());
         this.setBorder(titledBorder);
@@ -68,5 +72,17 @@ public class CustomerDataPanel extends JPanel implements Initializable {
         constraints.weightx = 1;
         constraints.weighty = 1;
         this.add(Box.createRigidArea(new Dimension(0,0)), constraints);
+    }
+
+    public void loadIntoPanel(Vector<Object> data){
+        this.data = data;
+        showData();
+    }
+
+    private void showData(){
+        firstNameField.setText(data.get(1).toString());
+        lastNameField.setText(data.get(2).toString());
+        addressField.setText(data.get(3).toString());
+        phoneNumberField.setText(data.get(4).toString());
     }
 }

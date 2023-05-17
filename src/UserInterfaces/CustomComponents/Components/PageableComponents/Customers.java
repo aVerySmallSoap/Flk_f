@@ -26,17 +26,18 @@ public class Customers extends JPanel implements Initializable {
         SplitTheme.setUp();
         this.setName(NAME);
         this.setLayout(new BorderLayout());
+        CustomerDataPanel customer = new CustomerDataPanel();
         dataTable table = new dataTable(
                 new ConnectionController(
                         "customer_orders",
                         "root",
                         "root"),
-                "customers");
+                "customers",
+                customer);
         JScrollPane scrollPane = new JScrollPane(table);
         JPanel tablePanel = new JPanel(new BorderLayout());
         JPanel tableBottomPadding = new JPanel();
         JSplitPane split = new JSplitPane();
-        CustomerDataPanel customer = new CustomerDataPanel();
 
         split.setResizeWeight(1);
         this.add(split, BorderLayout.CENTER);

@@ -3,6 +3,7 @@ package UserInterfaces.CustomComponents.Components;
 import Controllers.TableController;
 import Interfaces.IConnector;
 import Interfaces.Initializable;
+import UserInterfaces.CustomComponents.Components.CustomPanels.CustomerDataPanel;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -19,6 +20,8 @@ public class dataTable extends JTable implements Initializable{
 
     private final IConnector connector;
     private String table;
+    private CustomerDataPanel dataPanel;
+    private customSelectionModel selectionModel;
 
     public dataTable(IConnector connector){
         this.connector = connector;
@@ -30,11 +33,19 @@ public class dataTable extends JTable implements Initializable{
         this.table = table;
         init();
     }
+
+    public dataTable(IConnector connector, String table, CustomerDataPanel dataPanel){
+        this.connector = connector;
+        this.table = table;
+        this.dataPanel = dataPanel;
+        init();
+    }
     
     @Override
     public void init() {
         this.setModel(new customTableModel(new TableController(), this));
-        this.setSelectionModel(new customSelectionModel(this));
+        selectionModel = new customSelectionModel(this, dataPanel);
+        this.setSelectionModel(selectionModel);
     }
 
     public String getTable() {
@@ -100,9 +111,20 @@ class customTableModel extends AbstractTableModel {
 class customSelectionModel extends DefaultListSelectionModel implements ListSelectionListener {
 
     dataTable table;
+    CustomerDataPanel dataPanel;
 
     customSelectionModel(dataTable table){
         this.table = table;
+        init();
+    }
+
+    customSelectionModel(dataTable table, CustomerDataPanel dataPanel){
+        this.table = table;
+        this.dataPanel = dataPanel;
+        init();
+    }
+
+    private void init(){
         this.addListSelectionListener(this);
         this.setSelectionMode(SINGLE_SELECTION);
     }
@@ -115,6 +137,7 @@ class customSelectionModel extends DefaultListSelectionModel implements ListSele
             for (int i = 0; i < table.getColumnCount(); i++) {
                 selectedValues.add(table.getValueAt(table.getSelectedRow(), i));
             }
+            dataPanel.loadIntoPanel(selectedValues);
         }
     }
 }
