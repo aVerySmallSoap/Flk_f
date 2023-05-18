@@ -1,4 +1,4 @@
-package UserInterfaces.CustomComponents.Components.PageableComponents.Table.Components;
+package UserInterfaces.CustomComponents.Components.Pageable.Table.Components;
 
 import Interfaces.Initializable;
 import com.formdev.flatlaf.FlatLightLaf;

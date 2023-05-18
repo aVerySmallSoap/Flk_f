@@ -1,12 +1,11 @@
-package UserInterfaces.CustomComponents.Components.CustomPanels;
+package UserInterfaces.CustomComponents.Components.Panels;
 
 import Interfaces.Initializable;
 import UserInterfaces.CustomComponents.Colors;
-import UserInterfaces.CustomComponents.Components.dataTable;
+import UserInterfaces.CustomComponents.Components.Tables.dataTable;
 import UserInterfaces.CustomComponents.Icons;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
 import java.awt.*;
 

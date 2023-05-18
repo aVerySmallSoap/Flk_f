@@ -1,11 +1,11 @@
-package UserInterfaces.CustomComponents.Components.PageableComponents;
+package UserInterfaces.CustomComponents.Components.Pageable;
 
 import Controllers.ConnectionController;
 import Interfaces.Initializable;
 import UserInterfaces.CustomComponents.Colors;
-import UserInterfaces.CustomComponents.Components.CustomPanels.CustomerDataPanel;
-import UserInterfaces.CustomComponents.Components.CustomPanels.SearchPanel;
-import UserInterfaces.CustomComponents.Components.dataTable;
+import UserInterfaces.CustomComponents.Components.Panels.CustomerDataPanel;
+import UserInterfaces.CustomComponents.Components.Panels.SearchPanel;
+import UserInterfaces.CustomComponents.Components.Tables.dataTable;
 import UserInterfaces.CustomComponents.Themes.SplitTheme;
 
 import javax.swing.*;

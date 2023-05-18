@@ -1,4 +1,4 @@
-package UserInterfaces.CustomComponents.Components.CustomPanels;
+package UserInterfaces.CustomComponents.Components.Panels;
 
 import Interfaces.Initializable;
 import UserInterfaces.CustomComponents.Components.StaticLabel;
@@ -7,8 +7,6 @@ import UserInterfaces.CustomComponents.Components.StaticTextField;
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Vector;
 
 public class CustomerDataPanel extends JPanel implements Initializable{

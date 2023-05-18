@@ -1,4 +1,4 @@
-package UserInterfaces.CustomComponents.Components.Function;
+package UserInterfaces.CustomComponents.Components.Events;
 
 import Controllers.TabController;
 import Interfaces.Initializable;

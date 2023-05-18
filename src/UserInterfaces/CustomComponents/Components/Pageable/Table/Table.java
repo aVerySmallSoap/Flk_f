@@ -1,9 +1,9 @@
-package UserInterfaces.CustomComponents.Components.PageableComponents.Table;
+package UserInterfaces.CustomComponents.Components.Pageable.Table;
 
 import Interfaces.Initializable;
 import UserInterfaces.CustomComponents.Colors;
-import UserInterfaces.CustomComponents.Components.CustomPanels.SearchPanel;
-import UserInterfaces.CustomComponents.Components.dataTable;
+import UserInterfaces.CustomComponents.Components.Panels.SearchPanel;
+import UserInterfaces.CustomComponents.Components.Tables.dataTable;
 
 import javax.swing.*;
 import javax.swing.border.MatteBorder;

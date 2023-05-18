@@ -1,4 +1,4 @@
-package UserInterfaces.CustomComponents.Components.PageableComponents;
+package UserInterfaces.CustomComponents.Components.Pageable;
 
 import Interfaces.Initializable;
 

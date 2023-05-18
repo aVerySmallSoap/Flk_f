@@ -1,9 +1,9 @@
-package UserInterfaces.CustomComponents.Components.CustomButtons;
+package UserInterfaces.CustomComponents.Components.Buttons;
 
 import Interfaces.Initializable;
-import UserInterfaces.CustomComponents.Components.CustomPanels.Singletons.CenterPanel;
+import UserInterfaces.CustomComponents.Components.Panels.Singletons.CenterPanel;
 import Controllers.TabController;
-import UserInterfaces.CustomComponents.Components.PageableComponents.Home;
+import UserInterfaces.CustomComponents.Components.Pageable.Home;
 import UserInterfaces.CustomComponents.Icons;
 
 import javax.swing.*;
